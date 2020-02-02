@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 //import axios from 'axios';
 import Logo from '../../logo.png'
 import Profile from "../../profile.png"
-import { Card } from "../Characters/card"
-import '../Characters/Characters.css';
+import { Card } from "../Episodes/cards"
+import "../Episodes/Episodes.css"
 import { Link } from "react-router-dom";
 
-export class Characters extends Component {
+export class Episodes extends Component {
     state = {
         order:false,
-        dresses:[],
+        seasons:[],
         picture:""
     } 
 
@@ -19,13 +19,13 @@ export class Characters extends Component {
     }
 */
 
-    renderDresses=()=>{
-        console.log(this.state.dresses)
-        return this.state.dresses.map(dress => {
+    renderSeasons=()=>{
+        console.log(this.state.seasons)
+        return this.state.seasons.map(season => {
             return( 
                 <div>
-                    <button onClick={()=>this.showOrder(dress.picture)}>
-                            <Card picture={dress.picture}/>
+                    <button onClick={()=>this.showOrder(season.picture)}>
+                            <Card picture={season.picture}/>
                     </button>
                 </div>
             )
@@ -51,9 +51,7 @@ export class Characters extends Component {
                             <span>About us</span>
                         </Link>
                         <span onClick={this.showOrder}>Characters</span>
-                        <Link to="/Episodes">
                         <span>Episodes</span>
-                        </Link>
                         <div className="profile">
                             <img src={Profile} alt="Smiley face" />
                             <span className="username">pauchag</span>
@@ -85,7 +83,7 @@ export class Characters extends Component {
                                 Descripción
                             </li>
                         </ul>
-                        <button className="button-check">Rentar</button>
+                        <button className="button-check">View</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +91,7 @@ export class Characters extends Component {
         }
     }
 
-    showDresses=()=>{
+    showSeasons=()=>{
         const self = this;
         if(!this.state.order){
             return(
@@ -105,7 +103,9 @@ export class Characters extends Component {
                         <Link to="/">
                             <span>About us</span>
                         </Link>
+                        <Link to="/Characters">
                         <span onClick={this.showRentar}>Characters</span>
+                        </Link>
                         <span>Episodes</span>
                         <div className="profile">
                             <img src={Profile} alt="Smiley face" />
@@ -113,7 +113,7 @@ export class Characters extends Component {
                         </div>
                     </div>
 
-                    <div className="rent-container">
+                    <div className="info-container">
 
                         <div className="left">
                             <span className="left-header">Seasons</span>
@@ -136,9 +136,9 @@ export class Characters extends Component {
 
                         </div>
 
-                        <div className="dresses-container">
+                        <div className="seasons-container">
                         {
-                            self.renderDresses()
+                            self.renderSeasons()
                         }
                         </div>
                     </div>
@@ -151,7 +151,7 @@ export class Characters extends Component {
         return (
             <div className="r-top-container">
                 {
-                    this.showDresses()
+                    this.showSeasons()
                 }
                 {
                     this.displayOrder()
@@ -161,4 +161,4 @@ export class Characters extends Component {
     }
 }
 
-export default Characters
+export default Episodes

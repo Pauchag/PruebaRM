@@ -19,7 +19,9 @@ export class Home extends Component {
                     <Link to="/Characters">
                         <span>Characters</span>
                     </Link>
+                    <Link to="/Episodes">
                     <span>Episodes</span>
+                    </Link>
                     <div className="profile">
                         <img src={Profile} alt="Smiley face" />
                         <span className="username">pauchag</span>
