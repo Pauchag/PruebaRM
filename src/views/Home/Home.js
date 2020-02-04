@@ -14,17 +14,20 @@ export class Home extends Component {
                 <div className="navbar">
                     <img src={Logo} alt="Smiley face" />
                     <Link to="/">
-                    <span>About us</span>
+                        <span>About us</span>
                     </Link>
                     <Link to="/Characters">
                         <span>Characters</span>
                     </Link>
                     <Link to="/Episodes">
-                    <span>Episodes</span>
+                        <span>Episodes</span>
                     </Link>
                     <div className="profile">
                         <img src={Profile} alt="Smiley face" />
                         <span className="username">pauchag</span>
+                        <div class="search-bar">
+                            <span className="bar">Search bar</span>
+                        </div>
                     </div>
                 </div>
                 <div className="header-container">
@@ -40,17 +43,17 @@ export class Home extends Component {
                     <div className="footer-left">
 
                         <p className="footer-links">
-                            <a >Privacidad</a>
+                            <a >Privacy</a>
 
-                            <a >Término de Uso</a>
+                            <a >Terms of use</a>
 
-                            <a >Contact</a>
+                            <a >More about us</a>
 
 
-                            <a href="mailto:gabriel@discussthegame.com?Subject=Contact" target="_top">Contacto</a>
+                            <a href="mailto:paulinachabrand@gmail.com?Subject=Contact" target="_top">Contact</a>
                         </p>
 
-                        <p className="copy">FLECHÉ &copy; 2019</p>
+                        <p className="copy">Test Rick and Morty &copy; 2020</p>
                     </div>
                 </footer>
             </div>
