@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 //import axios from 'axios';
 import Logo from '../../logo.png'
 import Profile from "../../profile.png"
-import { Card } from "../Characters/card"
+import Card from "../Characters/card"
 import '../Characters/Characters.css';
 import { Link } from "react-router-dom";
 
@@ -10,32 +10,32 @@ export class Characters extends Component {
     state = {
         order:false,
         characters:[],
-        picture:""
+        image:""
     } 
 
-/*     componentDidMount(){
+     /* componentDidMount(){
         console.log('Hola')
         this.getCharactersByName()
-    }
-*/
+    } */
+
 
     renderCharacters=()=>{
         console.log(this.state.characters)
         return this.state.characters.map(character => {
             return( 
                 <div>
-                    <button onClick={()=>this.showOrder(character.picture)}>
-                            <Card picture={character.picture}/>
+                    <button onClick={()=>this.showOrder(character.image)}>
+                            <Card image={character.image}/>
                     </button>
                 </div>
             )
         })
     }
 
-    showOrder=(picture)=>{
+    showOrder=(image)=>{
         this.setState({
             order:!this.state.order,
-            picture:picture
+            image:image
         })
     }
 
@@ -61,10 +61,10 @@ export class Characters extends Component {
                     </div>
                     <div className="checkout">
                         <div className="first-image">
-                            <img src={this.state.picture} alt="Smiley face"/>
+                            <img src={this.state.image} alt="Smiley face"/>
                         </div>
                         <div className="second-image">
-                            <img src={this.state.picture} alt="Smiley face"/>
+                            <img src={this.state.image} alt="Smiley face"/>
                     </div>
 
                     <div className="info">
