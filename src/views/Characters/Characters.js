@@ -19,7 +19,7 @@ export class Characters extends Component {
     }
 */
 
-    renderCharactres=()=>{
+    renderCharacters=()=>{
         console.log(this.state.characters)
         return this.state.characters.map(character => {
             return( 
