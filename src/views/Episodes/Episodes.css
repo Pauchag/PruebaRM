@@ -44,7 +44,7 @@
     font-weight: 600;
 }
 
-.rent-container {
+.info-container {
     display: flex;
 }
 
@@ -54,7 +54,7 @@
     text-align: left;
 }
 
-.characters-container {
+.seasons-container {
 
     flex: 1;
    display: flex;
