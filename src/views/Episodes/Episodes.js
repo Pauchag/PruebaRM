@@ -6,6 +6,7 @@ import { Card } from "../Episodes/cards"
 import "../Episodes/Episodes.css"
 import { Link } from "react-router-dom";
 
+
 export class Episodes extends Component {
     state = {
         order:false,
@@ -19,7 +20,7 @@ export class Episodes extends Component {
     }
 */
 
-    renderSeasons=()=>{
+renderSeasons=()=>{
         console.log(this.state.seasons)
         return this.state.seasons.map(season => {
             return( 
@@ -68,22 +69,22 @@ export class Episodes extends Component {
                     <div className="info">
                         <ul>
                             <li>
-                                Tipo
+                                Name
                             </li>
                             <li>
-                                Precio
+                                Species
                             </li>
                             <li>
-                                Tamaño
+                                Location
                             </li>
                             <li>
-                                Marca
+                                Gender
                             </li>
                             <li>
-                                Descripción
+                                Origin
                             </li>
                         </ul>
-                        <button className="button-check">View</button>
+                        <button className="button-check">More info</button>
                         </div>
                     </div>
                 </div>
@@ -130,7 +131,7 @@ export class Episodes extends Component {
                                 <li>Wasteland</li>
                                 <li>Dog Dimension</li>
                                 <li>Toilet Dimension</li>
-                                <li>FURNITURE/PIZZA/PHONE WORLDS</li>
+                                <li>Furniture/Pizza/Phone Worlds</li>
 
                             </ul>
 
@@ -161,4 +162,4 @@ export class Episodes extends Component {
     }
 }
 
-export default Episodes
+  export default Episodes

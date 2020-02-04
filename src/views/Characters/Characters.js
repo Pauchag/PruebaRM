@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export class Characters extends Component {
     state = {
         order:false,
-        dresses:[],
+        characters:[],
         picture:""
     } 
 
@@ -19,13 +19,13 @@ export class Characters extends Component {
     }
 */
 
-    renderDresses=()=>{
-        console.log(this.state.dresses)
-        return this.state.dresses.map(dress => {
+    renderCharactres=()=>{
+        console.log(this.state.characters)
+        return this.state.characters.map(character => {
             return( 
                 <div>
-                    <button onClick={()=>this.showOrder(dress.picture)}>
-                            <Card picture={dress.picture}/>
+                    <button onClick={()=>this.showOrder(character.picture)}>
+                            <Card picture={character.picture}/>
                     </button>
                 </div>
             )
@@ -70,22 +70,22 @@ export class Characters extends Component {
                     <div className="info">
                         <ul>
                             <li>
-                                Tipo
+                                Name
                             </li>
                             <li>
-                                Precio
+                                Species
                             </li>
                             <li>
-                                Tamaño
+                                Location
                             </li>
                             <li>
-                                Marca
+                                Gender
                             </li>
                             <li>
-                                Descripción
+                                Origin
                             </li>
                         </ul>
-                        <button className="button-check">Rentar</button>
+                        <button className="button-check">More info</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ export class Characters extends Component {
         }
     }
 
-    showDresses=()=>{
+    showCharacters=()=>{
         const self = this;
         if(!this.state.order){
             return(
@@ -130,15 +130,15 @@ export class Characters extends Component {
                                 <li>Wasteland</li>
                                 <li>Dog Dimension</li>
                                 <li>Toilet Dimension</li>
-                                <li>FURNITURE/PIZZA/PHONE WORLDS</li>
+                                <li>Furniture/Pizza/Phone Worlds</li>
 
                             </ul>
 
                         </div>
 
-                        <div className="dresses-container">
+                        <div className="characters-container">
                         {
-                            self.renderDresses()
+                            self.renderCharacters()
                         }
                         </div>
                     </div>
@@ -151,7 +151,7 @@ export class Characters extends Component {
         return (
             <div className="r-top-container">
                 {
-                    this.showDresses()
+                    this.showCharacters()
                 }
                 {
                     this.displayOrder()
